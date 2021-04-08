@@ -1,7 +1,12 @@
 <h1>je suis la top</h1>
 <ul>
   <% @restaurants.each do |restaurant| %>
-  <li><%= restaurant.name %></li>
+  <li>
+    <%= restaurant.name %>
+    <%= link_to "show", restaurant %>
+    <%= link_to "edit", edit_restaurant_path(restaurant) %>
+    <%= link_to "delete", restaurant_path(restaurant), method: :delete, data: { confirm: "are you sure?"} %>
+  </li>
   <% end %>
 </ul>
 <%= link_to "retour index", restaurants_path %>

@@ -8,11 +8,11 @@
 puts "cleaning DB"
 Restaurant.destroy_all
 puts "creating DB"
-resto1 = { name: "la tour d'argent", address: "avenue charles de gaule", stars: "5"}
-resto2 = { name: "chez Wung", address: "derriere la muraille ", stars: "3"}
-resto3 = { name: "Boubou sauvage", address: "1 alleee de la cité", stars: "2"}
-resto4 = { name: "mcdonald", address: "avenue de clichy", stars: "0"}
-resto5 = { name: "ritz", address: "avenue charles de gaule", stars: "5"}
+resto1 = { name: "la tour d'argent", address: "avenue charles de gaule", stars: "5", chef_name: "Jean Eude"}
+resto2 = { name: "chez Wung", address: "derriere la muraille ", stars: "3", chef_name: "Mr Lee"}
+resto3 = { name: "Boubou sauvage", address: "1 alleee de la cité", stars: "2", chef_name: "Boubou"}
+resto4 = { name: "mcdonald", address: "avenue de clichy", stars: "0", chef_name: "Johnny"}
+resto5 = { name: "ritz", address: "avenue charles de gaule", stars: "5", chef_name: "Fils de pute"}
 Restaurants = []
 [resto1, resto2, resto3, resto4, resto5].each_with_index do |attributes,index|
 restaurant = Restaurant.create!(attributes)

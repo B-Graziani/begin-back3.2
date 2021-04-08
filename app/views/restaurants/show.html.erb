@@ -4,7 +4,12 @@
 
 <h2><%= @restaurant.address %></h2>
 
-<p><%= @restaurant.stars %>
+<p>
+  <%= @restaurant.stars %>
+  <br>
+  <%= @restaurant.chef_name %>
+  <%= link_to "chef", chef_name_restaurant_path %>
+
 </p>
 <br>
 <%= link_to "retour index", restaurants_path %>

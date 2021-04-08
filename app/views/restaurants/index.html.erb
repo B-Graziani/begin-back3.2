@@ -1,1 +1,13 @@
 <h1>Ici repose tous les restaurants</h1>
+<%= link_to "TOP", top_restaurants_path %>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li>
+    <%= restaurant.name %>
+    <%= link_to "show", restaurant %>
+    <%= link_to "edit", edit_restaurant_path(restaurant) %>
+    <%= link_to "delete", restaurant_path(restaurant), method: :delete, data: { confirm: "are you sure?"} %>
+  </li>
+  <% end %>
+</ul>
+<%= link_to "create restaurant", new_restaurant_path %>
